@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Inicio de Sesión</title>
@@ -16,30 +17,35 @@
 <body>
 
 
-        <div class="container">
-        <div class="row">
-            <div class="col col-md-3"></div>
-                <div class="col col-md-6">
+<div class="container">
+    <div class="row">
+        <div class="col col-md-3"></div>
+        <div class="col col-md-6">
 
-                    <form role="form" action="UsuarioServlet" method="post">
-                        <div class="form-group">
-                            <span for="usuario">Usuario</span>
-                            <input type="text" class="form-control m-2" name="usuario" id="usuario">
-
-                        </div>
-                        <div class="form-group">
-                            <span for="contrasena">Contraseña</span>
-                            <input type="password"  class="form-control m-2" name="contrasena" id="contrasena">
-                        </div>
-                        <input type="submit" class="btn btn-primary" value="Iniciar">
-                    </form>
+            <form role="form" action="UsuarioServlet" method="post">
+                <div class="form-group">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" class="form-control m-2" name="usuario" id="usuario">
 
                 </div>
-            <div class="col col-md-3"></div>
-        </div>
+                <div class="form-group">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" class="form-control m-2" name="contrasena" id="contrasena">
+                </div>
+                <input type="hidden" value="login" name="accion">
+                <input type="submit" class="btn btn-primary" value="Iniciar">
+            </form>
 
-
         </div>
+        <div class="col col-md-3"></div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">${error}</div>
+    <div class="col-md-3"></div>
+</div>
 
 </body>
 </html>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="platzi-ee">
+    <output-path>$PROJECT_DIR$/out/artifacts/platzi_ee</output-path>
+    <root id="archive" name="platzi-ee.war">
+      <element id="artifact" artifact-name="platzi-ee:war exploded" />
+    </root>
+  </artifact>
+</component>

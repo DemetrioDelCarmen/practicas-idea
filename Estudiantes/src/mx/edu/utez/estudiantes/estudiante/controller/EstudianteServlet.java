@@ -33,16 +33,24 @@ public class EstudianteServlet extends HttpServlet {
 
         response.sendRedirect("EstudianteServlet");
 
+
+
     }
 
+
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+
 
             EstudianteDao estudianteDao = new EstudianteDao();
             List<EstudianteBean> estudiantes = estudianteDao.obtenerEstudiantes();
 
+
             request.setAttribute("estudiantes",estudiantes);
 
-            request.getRequestDispatcher("index.jsp").forward(request,response);
+
+             request.getRequestDispatcher("index.jsp").forward(request,response);
 
     }
 }

@@ -71,6 +71,9 @@ public class EstudianteDao implements IEstudianteDao {
 
                 listaEstudiantes.add(estudiante);
             }
+            resultSet.close();
+            preparedStatement.close();
+            conexion.close();
             return listaEstudiantes;
         }catch (Exception ex){
             System.out.println(this.getClass().getCanonicalName()+ " " + ex.getMessage());

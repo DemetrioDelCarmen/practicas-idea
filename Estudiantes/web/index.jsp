@@ -42,6 +42,8 @@
         <th>Acciones</th>
         </thead>
         <tbody>
+
+
          <!--   expression languaje-->
           <c:forEach var="estudiante" items="${estudiantes}">
             <tr>
@@ -53,6 +55,7 @@
             </tr>
           </c:forEach>
         </tbody>
+
       </table>
     </div>
     <div class="col-md-3"></div>
